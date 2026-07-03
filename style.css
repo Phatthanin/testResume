@@ -1,0 +1,354 @@
+:root {
+	--bg: #f5efe6;
+	--panel: rgba(255, 255, 255, 0.8);
+	--panel-strong: #ffffff;
+	--text: #1f2937;
+	--muted: #5c6472;
+	--accent: #b45309;
+	--soft: #fef3c7;
+	--border: rgba(31, 41, 55, 0.1);
+	--shadow: 0 24px 60px rgba(31, 41, 55, 0.12);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	color: var(--text);
+	background:
+		radial-gradient(circle at top left, rgba(180, 83, 9, 0.14), transparent 26%),
+		linear-gradient(180deg, #fffaf3 0%, var(--bg) 100%);
+}
+
+p {
+	margin: 0;
+	line-height: 1.7;
+}
+
+.page-header {
+	width: min(1280px, calc(100% - 2rem));
+	margin: 1.25rem auto 0;
+	padding: 1rem 1.25rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	border: 1px solid var(--border);
+	border-radius: 28px;
+	background: rgba(255, 255, 255, 0.78);
+	box-shadow: var(--shadow);
+}
+
+.site-title {
+	margin: 0;
+	font-size: 1.35rem;
+	line-height: 1.1;
+}
+
+.header-nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	gap: 0.9rem;
+}
+
+.header-nav a {
+	padding: 0.55rem 0.8rem;
+	border-radius: 999px;
+	background: rgba(254, 243, 199, 0.72);
+	border: 1px solid rgba(180, 83, 9, 0.12);
+	color: var(--text);
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.header-nav a:hover,
+.header-nav a:focus-visible {
+	background: var(--soft);
+}
+
+.resume-page {
+	width: min(1280px, calc(100% - 2rem));
+	margin: 0 auto;
+	padding: 1rem 0 2.25rem;
+	display: grid;
+	grid-template-columns: minmax(320px, 390px) minmax(0, 1fr);
+	gap: 1.5rem;
+}
+
+.profile-panel,
+.content-panel,
+.resume-card,
+.content-header {
+	background: var(--panel);
+	border: 1px solid var(--border);
+	border-radius: 28px;
+	box-shadow: var(--shadow);
+}
+
+.profile-panel {
+	padding: 1.25rem;
+	display: grid;
+	gap: 1rem;
+	align-content: start;
+	position: sticky;
+	top: 1.5rem;
+	height: fit-content;
+	background: linear-gradient(180deg, var(--panel-strong), rgba(255, 255, 255, 0.72));
+}
+
+.profile-photo {
+	display: grid;
+	gap: 0.75rem;
+}
+
+.profile-image {
+	width: 100%;
+	aspect-ratio: 3 / 4;
+	object-fit: cover;
+	border-radius: 24px;
+	border: 1px solid var(--border);
+	background: #e5e7eb;
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+}
+
+.photo-hint {
+	font-size: 0.9rem;
+	line-height: 1.5;
+	color: var(--muted);
+	text-align: center;
+	padding: 0 0.5rem;
+}
+
+.photo-hint span {
+	font-weight: 700;
+	color: var(--accent);
+}
+
+.profile-block {
+	padding: 1rem 1.05rem;
+	border-radius: 22px;
+	background: rgba(255, 255, 255, 0.82);
+	border: 1px solid var(--border);
+}
+
+.eyebrow {
+	margin-bottom: 0.35rem;
+	text-transform: uppercase;
+	letter-spacing: 0.18em;
+	font-size: 0.72rem;
+	font-weight: 700;
+	color: var(--accent);
+}
+
+.profile-block h1,
+.content-header h2,
+.resume-card h3,
+.timeline-head h4 {
+	margin: 0;
+	line-height: 1.15;
+}
+
+.profile-block h1 {
+	font-size: 2rem;
+}
+
+.role {
+	margin-top: 0.35rem;
+	color: var(--muted);
+}
+
+.label {
+	font-size: 0.75rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.14em;
+	color: var(--accent);
+	margin-bottom: 0.25rem;
+}
+
+.info-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0.85rem;
+}
+
+.tag-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.65rem;
+	margin-top: 0.85rem;
+}
+
+.tag-list span {
+	padding: 0.55rem 0.8rem;
+	border-radius: 999px;
+	background: var(--soft);
+	border: 1px solid rgba(180, 83, 9, 0.12);
+	font-size: 0.92rem;
+	font-weight: 600;
+}
+
+.content-panel {
+	padding: 1.25rem;
+	background: transparent;
+	border: none;
+	box-shadow: none;
+	display: grid;
+	gap: 1rem;
+}
+
+.content-header {
+	padding: 1.4rem 1.5rem;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1rem;
+	align-items: center;
+	background: rgba(255, 255, 255, 0.72);
+}
+
+.content-header h2 {
+	font-size: clamp(2rem, 3.2vw, 3.7rem);
+	max-width: 13ch;
+}
+
+.header-note {
+	padding: 1rem 1.05rem;
+	border-radius: 20px;
+	background: rgba(254, 243, 199, 0.72);
+	border: 1px solid rgba(180, 83, 9, 0.12);
+	color: var(--muted);
+	line-height: 1.6;
+}
+
+.large-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 1rem;
+}
+
+.resume-card {
+	padding: 1.35rem;
+	background: rgba(255, 255, 255, 0.84);
+	min-height: 100%;
+}
+
+.resume-card h3 {
+	font-size: 1.15rem;
+	margin-bottom: 0.9rem;
+}
+
+.inner-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 0.85rem;
+	margin-top: 1rem;
+}
+
+.inner-grid > div {
+	padding: 0.95rem;
+	border-radius: 18px;
+	background: rgba(244, 239, 231, 0.82);
+	border: 1px solid var(--border);
+}
+
+.inner-grid > .center-item {
+	grid-column: 1 / -1;
+	justify-self: center;
+	width: min(100%, 50%);
+}
+
+.inner-grid.single {
+	grid-template-columns: 1fr 1fr;
+}
+
+.timeline-item + .timeline-item,
+.project-list > * + * {
+	margin-top: 1rem;
+	padding-top: 1rem;
+	border-top: 1px solid var(--border);
+}
+
+.timeline-head {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	align-items: baseline;
+	margin-bottom: 0.35rem;
+}
+
+.timeline-head span {
+	color: var(--accent);
+	font-size: 0.92rem;
+	white-space: nowrap;
+}
+
+@media (max-width: 1040px) {
+	.page-header,
+	.resume-page {
+		grid-template-columns: 1fr;
+	}
+
+	.page-header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.header-nav {
+		justify-content: flex-start;
+	}
+
+	.profile-panel {
+		position: static;
+	}
+
+	.content-header,
+	.large-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 700px) {
+	.page-header,
+	.resume-page {
+		width: min(100% - 1rem, 1280px);
+		padding-top: 0.75rem;
+	}
+
+	.page-header {
+		margin-top: 0.75rem;
+	}
+
+	.info-grid,
+	.inner-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.profile-panel,
+	.content-header,
+	.resume-card,
+	.profile-block {
+		border-radius: 22px;
+	}
+
+	.content-panel {
+		padding: 0;
+	}
+
+	.content-header,
+	.resume-card,
+	.profile-panel {
+		padding: 1rem;
+	}
+
+	.content-header h2 {
+		font-size: 1.9rem;
+	}
+}
